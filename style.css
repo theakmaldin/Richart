@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.momentum {
+  background: linear-gradient(135deg, #fc0a7e, #cf0063, #450e4b);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 1152px;
+  align-items: center;
+}
+.container {
+  max-width: 1152px;
+}
+.menu__item {
+  color: #ffffff;
+  margin-left: 30px;
+  text-decoration: none;
+}
+.momentum-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 650px;
+  justify-content: space-around;
+  justify-items: auto;
+  text-align: center;
+}
+.momentum-section h1 {
+  font-size: 80px;
+  color: #fff;
+}
+.momentum-section p {
+  font: 35px;
+  color: #ffffff;
+}
+.momentum-section button {
+  background: #fc0a7e;
+  color: #ffffff;
+  border-radius: 5px;
+  width: 170px;
+  height: 66px;
+  border: none;
+}
+.momentum-section img {
+  margin-right: 70px;
+}
+.desktop-app-info {
+  background: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  text-align: center;
+}
+.desktop-app-info__item_size-s {
+  color: #a8a8a8;
+  font-size: 12px;
+}
+.desktop-app-info__item_size-m {
+  color: #ffffff;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+.dekstop-app-info__img {
+  max-width: 90%;
+}
+
+.mobile-app-info-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+.mobile-app-info-1__text {
+  max-width: 450px;
+  padding-right: 100px;
+}
+.mobile-app-info-1__text__item-s {
+  color: #a8a8a8;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.mobile-app-info-1__text__item-l {
+  font-size: 38px;
+  margin-top: 25px;
+  margin-bottom: 22px;
+  max-width: 302px;
+}
+.mobile-app-info-1__text__item-m {
+  color: #6b6b6b;
+  font-size: 16px;
+  line-height: 30px;
+  max-width: 306px;
+}
+.mobile-app-orders__text {
+  max-width: 450px;
+  padding-left: 100px;
+}
+.mobile-app-orders {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-app-orders__textitem-s {
+  color: #a8a8a8;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.mobile-app-orders__textitem-l {
+  font-size: 38px;
+  margin-top: 25px;
+  margin-bottom: 22px;
+  max-width: 302px;
+}
+.mobile-app-orders__textitem-m {
+  color: #6b6b6b;
+  font-size: 16px;
+  line-height: 30px;
+  max-width: 306px;
+}
+
+/*  виды верстки */
+/* фиксированная верстка - все указано в PX (пикселях) */
+/* резиновая верстка - все указано в %, vh, vw, rem */
+/* отзывчивая - подстраивается под определенные размеры, меняет расположения блоков */
+/* адаптивная верстка - все вместе */
+/* ............................... */
+/* @media -  запросы нужны, чтоб задать адаптивку */
+/* desktop-first */
+/* mobile-first */
+
+@media all and (max-width: 1162px) {
+  header {
+    width: 90%;
+  }
+}
+@media all and (max-width: 800px) {
+  .mobile-app-orders {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .mobile-app-orders__text {
+    padding-left: 0px;
+  }
+  .mobile-app-orders__textitem-l {
+    max-width: 100%;
+  }
+  .mobile-app-orders img {
+    max-width: 75%;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .momentum-section img {
+    margin-right: 0px;
+    max-width: 95%;
+  }
+
+  .mobile-app-info-1 {
+    flex-direction: column;
+  }
+  .mobile-app-info-1 img {
+    max-width: 50%;
+  }
+  .mobile-app-info-1__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0px;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 570px) {
+  header {
+    flex-direction: column;
+  }
+  .momentum-section h1 {
+    font-size: 60px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .momentum-section h1 {
+    font-size: 40px;
+  }
+  .momentum-section button {
+    width: 125px;
+    height: 40px;
+  }
+  .momentum-section {
+    height: 580px;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu__item {
+    font-size: 24px;
+  }
+  .desktop-app-info__item_size-m {
+    font-size: 15px;
+  }
+  .mobile-app-info-1__text__item-l {
+    font-size: 20px;
+  }
+
+  .mobile-app-info-1__text__item-m {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .mobile-app-info-1__text__item-l {
+    font-size: 23px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .mobile-app-orders__text_item-m {
+    font-size: 12px;
+  }
+}
